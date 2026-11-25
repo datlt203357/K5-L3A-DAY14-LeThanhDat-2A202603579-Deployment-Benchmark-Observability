@@ -54,8 +54,7 @@ Lệnh này đã được chạy với `Xin chào` và trả **HTTP 200**.
 
 ## Screenshots
 
+- [Railway dashboard: `agent` và Redis Online, deployment Successful](screenshots/dashboard.png).
 - [Service running: phản hồi `/health` thật](screenshots/running.png).
 - [Bốn kết quả kiểm tra HTTP](screenshots/test.png) — ảnh chụp trang tổng hợp kết quả từ request thực tế; [nguồn HTML](screenshots/test-results.html).
 - [Trạng thái triển khai](screenshots/status.png) — ảnh chụp trang ghi lại kết quả Railway CLI, không phải dashboard Railway; [nguồn HTML](screenshots/status.html).
-
-Ảnh dashboard Railway trực tiếp chưa có. Để bổ sung theo mẫu checklist: mở liên kết service ở trên khi đã đăng nhập Railway, chụp trạng thái `agent` và `Redis`, lưu thành `screenshots/dashboard.png`.

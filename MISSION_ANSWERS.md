@@ -269,7 +269,7 @@ Tăng mock error lên 20% và slow lên 30% làm `AgentHighErrorRate` và `Agent
 - Cách kiểm tra: chạy `check_production_ready.py --static-only`, `--skip-docker` và bản đầy đủ trong WSL2; bản đầy đủ đạt 12/12 và 41/41. Chạy thêm Compose với Redis và gọi `/health`, `/ready`, `/ask`; tất cả trả 200. Các số đo nêu trong Part 6 là output thực tế.
 - Câu hỏi gửi AI: đọc các file `.md` và thực hiện CP6.
 - Hỗ trợ nhận được: tạo project/service Railway, triển khai `06-lab-complete/`, nối Redis và API key bằng biến môi trường, tạo URL public, viết `DEPLOYMENT.md` và ảnh bằng chứng.
-- Cách kiểm tra: Railway CLI báo `agent` và Redis chạy; bốn request tới URL public lần lượt trả 200, 200, 401, 200. `screenshots/test.png` là ảnh chụp trang trình bày các kết quả đã ghi lại; `screenshots/status.png` trình bày trạng thái CLI, không phải ảnh dashboard Railway.
+- Cách kiểm tra: Railway CLI báo `agent` và Redis chạy; bốn request tới URL public lần lượt trả 200, 200, 401, 200. `screenshots/test.png` là ảnh chụp trang trình bày các kết quả đã ghi lại; `screenshots/status.png` trình bày trạng thái CLI. `screenshots/dashboard.png` là ảnh dashboard Railway thật do người dùng chụp, hiển thị agent và Redis Online cùng deployment Successful.
 - Câu hỏi gửi AI: đọc hướng dẫn và thực hiện CP7.
 - Hỗ trợ nhận được: thêm metric độ dài câu hỏi, chạy load test và eval trên WSL2, sửa hai entry của knowledge base, tạo report và workflow CI.
 - Cách kiểm tra: đối chiếu bảng số liệu với 10 file JSON trong `develop/reports/`; eval cuối 23/23 với quality gate PASS, v1 so với baseline v2 trả exit code 1. Các hàng SLO fail vẫn giữ nguyên theo output thực tế.
