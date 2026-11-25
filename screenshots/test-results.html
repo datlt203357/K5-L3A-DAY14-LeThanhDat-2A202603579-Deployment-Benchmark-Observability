@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="vi">
+<meta charset="utf-8">
+<title>CP6 public endpoint test results</title>
+<style>
+  body { margin: 0; padding: 46px; background: #111827; color: #e5e7eb; font: 19px/1.65 Consolas, monospace; }
+  h1 { margin: 0 0 10px; font: 700 30px/1.2 system-ui; }
+  p { margin: 0 0 28px; color: #9ca3af; font: 16px/1.5 system-ui; }
+  .panel { background: #030712; border: 1px solid #374151; border-radius: 12px; padding: 25px 30px; }
+  .line { display: flex; gap: 30px; justify-content: space-between; border-bottom: 1px solid #1f2937; padding: 11px 0; }
+  .line:last-child { border: 0; }
+  .ok { color: #4ade80; font-weight: bold; }
+  .warn { color: #fbbf24; font-weight: bold; }
+  footer { margin-top: 22px; color: #9ca3af; font: 15px/1.5 system-ui; }
+</style>
+<h1>CP6 — Kết quả kiểm tra URL public</h1>
+<p>Railway · 25/11/2026 · https://agent-production-12dcc0d5.up.railway.app</p>
+<div class="panel">
+  <div class="line"><span>GET /health</span><span class="ok">200</span></div>
+  <div class="line"><span>GET /ready</span><span class="ok">200</span></div>
+  <div class="line"><span>POST /ask · không có API key</span><span class="warn">401</span></div>
+  <div class="line"><span>POST /ask · API key hợp lệ</span><span class="ok">200</span></div>
+</div>
+<footer>Ghi lại từ bốn request thực tế. Key chỉ nằm trong biến môi trường Railway; ảnh không chứa key.</footer>
+</html>

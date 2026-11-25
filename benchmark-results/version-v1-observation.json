@@ -1,0 +1,66 @@
+{
+  "observed_utc": "2026-11-25T15:27:58.0402467Z",
+  "queries": {
+    "agent_info": [
+      {
+        "metric": {
+          "__name__": "agent_info",
+          "instance": "172.19.0.2:8000",
+          "job": "agent",
+          "model": "mock-llm-small",
+          "version": "v1"
+        },
+        "value": [
+          1795620478.598,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "agent_info",
+          "instance": "172.19.0.9:8000",
+          "job": "agent",
+          "model": "mock-llm-small",
+          "version": "v1"
+        },
+        "value": [
+          1795620478.598,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "__name__": "agent_info",
+          "instance": "172.19.0.8:8000",
+          "job": "agent",
+          "model": "mock-llm-small",
+          "version": "v1"
+        },
+        "value": [
+          1795620478.598,
+          "1"
+        ]
+      }
+    ],
+    "error_rate": [
+      {
+        "metric": {},
+        "value": [
+          1795620478.792,
+          "0.016453506743366594"
+        ]
+      }
+    ],
+    "p95": [
+      {
+        "metric": {},
+        "value": [
+          1795620478.844,
+          "0.22382431380602513"
+        ]
+      }
+    ],
+    "retrieval_rate": []
+  },
+  "alerts": []
+}

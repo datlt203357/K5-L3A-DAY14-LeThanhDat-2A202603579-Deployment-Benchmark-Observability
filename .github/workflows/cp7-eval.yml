@@ -1,0 +1,31 @@
+name: CP7 quality gate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 06-lab-complete/benchmark-observability/develop
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run v2 and enforce accuracy gate
+        run: |
+          AGENT_VERSION=v2 MOCK_ERROR_RATE=0 MOCK_SLOW_RATE=0 PORT=8002 python app.py > /tmp/cp7-agent.log 2>&1 &
+          for attempt in {1..30}; do
+            if curl -fsS http://localhost:8002/health > /dev/null; then break; fi
+            sleep 1
+          done
+          curl -fsS http://localhost:8002/health > /dev/null
+          python eval/run_eval.py --url http://localhost:8002 \
+            --min-accuracy 0.85 --baseline reports/eval_v2_fixed.json \
+            --out /tmp/cp7-eval-ci.json

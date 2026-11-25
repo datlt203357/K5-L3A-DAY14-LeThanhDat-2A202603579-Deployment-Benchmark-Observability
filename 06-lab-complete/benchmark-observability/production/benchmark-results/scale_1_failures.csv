@@ -1,0 +1,5 @@
+Method,Name,Error,Occurrences,First Seen,Last Seen
+POST,/ask,"ChunkedEncodingError(ProtocolError('Connection broken: IncompleteRead(0 bytes read, 382 more expected)', IncompleteRead(0 bytes read, 382 more expected)))",1,2026-11-25T10:22:26Z,2026-11-25T10:22:26Z
+POST,/ask,HTTPError('504 Server Error: Gateway Time-out for url: /ask'),86,2026-11-25T10:22:21Z,2026-11-25T10:22:27Z
+POST,/ask,HTTPError('503 Server Error: Service Unavailable for url: /ask'),49,2026-11-25T10:20:34Z,2026-11-25T10:22:10Z
+POST,/ask,"ChunkedEncodingError(ProtocolError('Connection broken: IncompleteRead(0 bytes read, 364 more expected)', IncompleteRead(0 bytes read, 364 more expected)))",2,2026-11-25T10:22:26Z,2026-11-25T10:22:26Z

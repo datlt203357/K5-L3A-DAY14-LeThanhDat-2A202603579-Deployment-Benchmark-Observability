@@ -1,0 +1,17 @@
+{
+  "observed_utc": "2026-11-25T15:27:17.1788779Z",
+  "question": "JWT la gi?",
+  "response": {
+    "answer": "Câu hỏi hay! Điều này phụ thuộc vào kiến trúc hệ thống và yêu cầu cụ thể của bạn.",
+    "model": "mock-llm-small",
+    "agent_version": "v1",
+    "usage": {
+      "input_tokens": 28,
+      "output_tokens": 20,
+      "cost_usd": 1.62E-05
+    },
+    "llm_latency_ms": 164.7,
+    "request_id": "6481030d18ad",
+    "trace_id": "984976731c08ca32276645f49a45b3ac"
+  }
+}

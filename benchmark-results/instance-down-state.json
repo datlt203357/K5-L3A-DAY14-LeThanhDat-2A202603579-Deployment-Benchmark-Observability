@@ -1,0 +1,50 @@
+{
+  "observed_utc": "2026-11-25T15:24:21.4153273Z",
+  "alerts": [
+    {
+      "labels": {
+        "alertname": "AgentInstanceDown",
+        "instance": "172.19.0.9:8000",
+        "job": "agent",
+        "severity": "critical"
+      },
+      "annotations": {
+        "description": "Prometheus không gọi được /metrics của 172.19.0.9:8000 trong 30s",
+        "summary": "Instance agent 172.19.0.9:8000 không scrape được"
+      },
+      "state": "firing",
+      "activeAt": "2026-11-25T15:23:32.401817116Z",
+      "value": "0e+00"
+    },
+    {
+      "labels": {
+        "alertname": "LLMCostBurnRateHigh",
+        "severity": "warning"
+      },
+      "annotations": {
+        "description": "Tốc độ chi tiêu hiện tại: $65.89/giờ",
+        "summary": "Chi phí LLM đang vượt $2/giờ"
+      },
+      "state": "firing",
+      "activeAt": "2026-11-25T15:19:12.571501534Z",
+      "value": "6.588758986681455e+01"
+    }
+  ],
+  "targets": [
+    {
+      "instance": "172.19.0.9:8000",
+      "health": "down",
+      "lastError": "Get \"http://172.19.0.9:8000/metrics\": context deadline exceeded"
+    },
+    {
+      "instance": "172.19.0.8:8000",
+      "health": "up",
+      "lastError": ""
+    },
+    {
+      "instance": "172.19.0.2:8000",
+      "health": "up",
+      "lastError": ""
+    }
+  ]
+}
